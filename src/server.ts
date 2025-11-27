@@ -38,6 +38,7 @@ const server: Server = http.createServer((req: IncomingMessage, res: ServerRespo
                 const parseBody = JSON.parse(body);
                 console.log(parseBody);
                 console.log("Caching current changes");
+                console.log("Caching current changes2");
                 res.end(JSON.stringify(parseBody));
             } catch (error: any) {
                 console.log(error?.message);

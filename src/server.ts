@@ -23,31 +23,6 @@ const server: Server = http.createServer((req: IncomingMessage, res: ServerRespo
             path,
         }))
     }
-
-
-
-    // if (req.url == '/api/users' && req.method == "POST") {
-    //     let body = '';
-    //     req.on("data", chunk => {
-    //         body += chunk.toString();
-    //     });
-
-    //     req.on("end", () => {
-    //         try {
-    //             const parseBody = JSON.parse(body);
-    //             console.log(parseBody);
-    //             console.log("Caching current changes");
-    //             console.log("Caching current changes2");
-    //             res.end(JSON.stringify(parseBody));
-    //         } catch (error: any) {
-    //             console.log(error?.message);
-    //         }
-    //     });
-
-
-    // }
-
-
 });
 
 server.listen(config.port, () => {

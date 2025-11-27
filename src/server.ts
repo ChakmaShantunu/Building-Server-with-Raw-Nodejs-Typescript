@@ -14,6 +14,16 @@ const server: Server = http.createServer((req: IncomingMessage, res: ServerRespo
             }
         ))
     }
+
+    if (req.url == '/api' && req.method == "GET") {
+        res.writeHead(200, { "content-type": "application/json" });
+        res.end(JSON.stringify(
+            {
+                message: "Health status ok",
+                path: req.url,
+            }
+        ))
+    }
 });
 
 server.listen(config.port, () => {
